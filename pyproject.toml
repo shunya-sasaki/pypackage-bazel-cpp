@@ -1,0 +1,25 @@
+[build-system]
+requires = ['setuptools', 'setuptools_scm', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name="mypackage"
+dependencies = []
+dynamic = ['version']
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["mypackage"]  # alternatively: `exclude = ["additional*"]`
+namespaces = false
+
+[tool.setuptools.package-data]
+"*" = ["*.h"]
+
+[tool.setuptools.dynamic]
+version = {attr="mypackage._version.version"}
+
+[tool.setuptools_scm]
+write_to = "src/mypackage/_version.py"
+
+[tool.black]
+line-length = 80

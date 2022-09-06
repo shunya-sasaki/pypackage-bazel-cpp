@@ -1,0 +1,10 @@
+**/.ipynb_checkpoints/
+**/__pycache__/
+**/bazel-*
+**/.DS_Store
+**/_version.py
+**/*.egg-info
+/.vscode/
+/.venv/
+/dist/
+/doc/build/
